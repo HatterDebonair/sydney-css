@@ -1,0 +1,131 @@
+/* ============================================================
+   SYDNEY WHITTAKER | POET'S DEAD END  -  external stylesheet
+   Upload this file somewhere that serves it as text/css
+   (file.garden or GitHub+jsDelivr), then @import its URL
+   from your Chub description. Original work - edit freely.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+:root{
+  --syd-red:#e23b3b; --syd-red-dim:#a82a2a; --syd-orange:#d2722f; --syd-amber:#e8a24c;
+  --syd-text:#d7d4cf; --syd-muted:#8e8d88; --syd-faint:#5c5b58;
+  --syd-panel:rgba(18,20,25,0.84); --syd-panel2:rgba(28,30,37,0.9);
+  --syd-line:rgba(255,255,255,0.07); --syd-line2:rgba(226,59,59,0.32);
+}
+
+.syd-atmos{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:0;overflow:hidden;background:#080a0d}
+.syd-atmos .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.13;filter:grayscale(0.45) contrast(1.05) brightness(0.85)}
+.syd-atmos .storm{position:absolute;inset:0;background:radial-gradient(70% 60% at 50% -10%,rgba(120,150,180,0.10),transparent 60%),linear-gradient(180deg,rgba(10,14,20,0.45),rgba(8,10,13,0.9))}
+.syd-atmos .glow{position:absolute;inset:0;background:radial-gradient(45% 40% at 82% 4%,rgba(210,114,47,0.12),transparent 60%),radial-gradient(45% 45% at 8% 96%,rgba(226,59,59,0.09),transparent 60%);mix-blend-mode:screen}
+.syd-atmos .vig{position:absolute;inset:0;background:radial-gradient(125% 95% at 50% 12%,transparent 42%,rgba(0,0,0,0.6) 100%)}
+.syd-rainfield{position:absolute;inset:-8% 0 0;overflow:hidden}
+.syd-drop{position:absolute;top:-170px;border-radius:0 0 2px 2px;background:linear-gradient(to bottom,rgba(174,194,214,0) 0%,rgba(174,194,214,0.55) 80%,rgba(200,216,230,0.75) 100%);animation-name:syd-fall;animation-timing-function:linear;animation-iteration-count:infinite;will-change:transform}
+@keyframes syd-fall{0%{transform:translateY(0)}100%{transform:translateY(118vh)}}
+.syd-splash{position:absolute;bottom:0;width:16px;height:5px;border-radius:50%;border:1px solid rgba(174,194,214,0.45);border-top:none;opacity:0;animation-name:syd-splash;animation-timing-function:ease-out;animation-iteration-count:infinite}
+@keyframes syd-splash{0%{transform:scale(0.2);opacity:0.55}70%{opacity:0}100%{transform:scale(1.5);opacity:0}}
+
+.syd-page{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:14px 14px 64px;color:var(--syd-text);font-family:'Inter',system-ui,sans-serif;font-weight:300;line-height:1.66;letter-spacing:0.1px}
+.syd-page *{box-sizing:border-box}
+.syd-page a{color:var(--syd-amber);text-decoration:none}
+.syd-page a:hover{color:#fff}
+
+.syd-hero{position:relative;display:flex;min-height:240px;border-radius:14px;overflow:hidden;border:1px solid var(--syd-line);box-shadow:0 20px 55px rgba(0,0,0,0.6)}
+.syd-hero .hbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%;filter:grayscale(0.4) contrast(1.1) brightness(0.62)}
+.syd-hero .hscan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,0.22) 0 2px,transparent 2px 4px);opacity:0.22;mix-blend-mode:multiply}
+.syd-hero .hgrad{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,10,13,0.92) 0%,rgba(8,10,13,0.6) 45%,rgba(8,10,13,0.15) 100%)}
+.syd-hero-body{position:relative;z-index:2;align-self:center;padding:30px 30px;border-left:3px solid var(--syd-red);margin-left:26px}
+.syd-eyebrow{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--syd-orange);margin-bottom:8px}
+.syd-name{font-family:'Oswald',sans-serif;font-weight:700;font-size:52px;line-height:0.9;letter-spacing:1px;margin:0;color:#f3f1ee;text-shadow:0 3px 22px rgba(0,0,0,0.85)}
+.syd-name .ln2{display:block;color:var(--syd-red)}
+.syd-sub{font-family:'Oswald',sans-serif;font-weight:300;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:var(--syd-muted);margin-top:12px}
+
+.syd-quote{margin:20px auto;text-align:center;font-family:'Special Elite',monospace;font-size:19px;color:var(--syd-red);letter-spacing:0.4px;text-shadow:0 0 22px rgba(226,59,59,0.4)}
+.syd-quote .mk{color:var(--syd-faint)}
+
+.syd-audio{margin:0 0 26px;display:flex;align-items:center;gap:13px;padding:11px 16px;border:1px solid var(--syd-line);border-radius:12px;background:var(--syd-panel)}
+.syd-eq{display:flex;gap:3px;align-items:flex-end;height:22px;flex:none}
+.syd-eq i{width:3px;background:var(--syd-orange);border-radius:2px;animation:syd-eq 0.9s ease-in-out infinite}
+.syd-eq i:nth-child(2){animation-delay:.15s}.syd-eq i:nth-child(3){animation-delay:.3s}.syd-eq i:nth-child(4){animation-delay:.45s}.syd-eq i:nth-child(5){animation-delay:.6s}
+@keyframes syd-eq{0%,100%{height:5px}50%{height:20px}}
+.syd-audio .meta{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:1.5px;color:var(--syd-muted);text-transform:uppercase;flex:none}
+.syd-audio .meta b{color:var(--syd-text);font-weight:400}
+.syd-page audio{flex:1;height:34px;filter:grayscale(0.5) invert(0.92) hue-rotate(180deg) contrast(0.95)}
+
+.syd-h{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--syd-amber);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.syd-h::before{content:"";width:7px;height:7px;background:var(--syd-red);transform:rotate(45deg);flex:none}
+.syd-h::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--syd-line2),transparent)}
+
+.syd-dossier{display:flex;gap:28px;align-items:flex-start;margin-bottom:30px}
+.syd-polaroid{flex:none;width:230px;background:#ece8df;padding:12px 12px 0;border-radius:3px;transform:rotate(-3deg);box-shadow:0 16px 36px rgba(0,0,0,0.55);position:relative;margin-top:8px;z-index:1;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.syd-polaroid:hover{transform:rotate(0deg) scale(1.22);box-shadow:0 30px 70px rgba(0,0,0,0.75);z-index:25}
+.syd-polaroid::before{content:"";position:absolute;top:-12px;left:50%;transform:translateX(-50%) rotate(-2deg);width:90px;height:26px;background:rgba(210,114,47,0.42);border:1px dashed rgba(255,255,255,0.25);box-shadow:0 2px 6px rgba(0,0,0,0.3)}
+.syd-polaroid img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover;object-position:50% 22%;filter:grayscale(0.2) contrast(1.05)}
+.syd-polaroid .cap{font-family:'Special Elite',monospace;font-size:13px;color:#3a3631;text-align:center;padding:12px 4px 14px;letter-spacing:0.5px}
+.syd-notes{flex:1;min-width:0;border-left:2px solid var(--syd-line2);padding:2px 0 2px 22px;background:repeating-linear-gradient(180deg,transparent 0 30px,rgba(255,255,255,0.03) 30px 31px)}
+.syd-notes p{margin:0 0 13px}.syd-notes p:last-child{margin-bottom:0}
+
+.syd-card{position:relative;background:var(--syd-panel);border:1px solid var(--syd-line);border-radius:12px;padding:20px 22px;box-shadow:0 12px 32px rgba(0,0,0,0.4);margin-bottom:26px}
+.syd-card p{margin:0 0 12px}.syd-card p:last-child{margin-bottom:0}
+.syd-card .edit{color:var(--syd-muted);font-size:13px}.syd-card .edit b{color:var(--syd-orange)}
+
+.syd-crew-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+.syd-crew{position:relative;flex:1;min-width:210px;display:flex;align-items:center;gap:14px;padding:14px;border:1px solid var(--syd-line);border-radius:12px;background:var(--syd-panel);transition:border-color .2s,transform .2s}
+.syd-crew:hover{border-color:var(--syd-line2);transform:translateY(-2px)}
+.syd-crew .av{flex:none;width:62px;height:62px;border-radius:50%;overflow:hidden;border:2px solid var(--syd-red-dim);background:linear-gradient(150deg,#23262e,#15171c);box-shadow:0 6px 16px rgba(0,0,0,0.5)}
+.syd-crew .av img{width:100%;height:100%;object-fit:cover;display:block}
+.syd-crew .cn{font-family:'Oswald',sans-serif;font-weight:600;font-size:18px;letter-spacing:1px;color:#f0eee9;text-transform:uppercase}
+.syd-crew .cr{font-size:12.5px;color:var(--syd-muted);margin-top:2px}
+.syd-crew .go{margin-left:auto;font-family:'Special Elite',monospace;font-size:11px;color:var(--syd-faint);letter-spacing:1px}
+.syd-crew:hover .go{color:var(--syd-red)}
+.syd-pop{position:absolute;left:50%;bottom:calc(100% + 14px);transform:translateX(-50%) translateY(10px) scale(.85);transform-origin:bottom center;width:240px;opacity:0;pointer-events:none;z-index:40;transition:opacity .3s ease,transform .3s cubic-bezier(.2,.8,.2,1)}
+.syd-pop img{width:100%;display:block;border-radius:12px;border:2px solid var(--syd-red-dim);box-shadow:0 22px 50px rgba(0,0,0,0.7);aspect-ratio:1/1;object-fit:cover}
+.syd-pop .pcap{display:block;margin-top:8px;text-align:center;font-family:'Special Elite',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--syd-amber)}
+.syd-pop::after{content:"";position:absolute;top:calc(100% - 8px);left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:var(--syd-red-dim)}
+.syd-crew:hover .syd-pop{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}
+
+.syd-arc{position:relative;padding:6px 0 4px;margin-bottom:8px}
+.syd-arc::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:2px;transform:translateX(-50%);background:linear-gradient(180deg,transparent,var(--syd-red-dim) 8%,var(--syd-orange) 92%,transparent)}
+.syd-node{position:relative;width:50%;padding:10px 34px;margin:6px 0}
+.syd-node.left{left:0;text-align:right}
+.syd-node.right{left:50%;text-align:left}
+.syd-dot{position:absolute;top:18px;width:38px;height:38px;border-radius:50%;background:#12141a;border:2px solid var(--syd-red-dim);display:flex;align-items:center;justify-content:center;z-index:2;transition:border-color .25s,box-shadow .25s,transform .25s}
+.syd-dot span{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;color:var(--syd-orange)}
+.syd-node.left .syd-dot{right:-19px}
+.syd-node.right .syd-dot{left:-19px}
+.syd-tile{display:inline-block;text-align:left;max-width:340px;width:100%;background:var(--syd-panel);border:1px solid var(--syd-line);border-radius:11px;padding:13px 16px;transition:border-color .25s,transform .25s,box-shadow .25s}
+.syd-tile-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.syd-tile h5{font-family:'Oswald',sans-serif;font-weight:600;font-size:17px;letter-spacing:.5px;color:#f3f1ee;margin:0}
+.syd-tile-sub{font-family:'Special Elite',monospace;font-size:10.5px;letter-spacing:1px;color:var(--syd-orange);text-transform:uppercase}
+.syd-reveal{max-height:0;overflow:hidden;opacity:0;transition:max-height .4s ease,opacity .35s ease}
+.syd-node:hover .syd-reveal{max-height:520px;opacity:1}
+.syd-tile p{font-size:13px;color:var(--syd-muted);margin:8px 0 0;line-height:1.5}
+.syd-tile-img{width:100%;display:block;margin-top:10px;border-radius:8px;border:1px solid var(--syd-line2);filter:grayscale(0.12) contrast(1.04)}
+.syd-node:hover .syd-tile{border-color:var(--syd-line2);transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,0.45)}
+.syd-node:hover .syd-dot{border-color:var(--syd-red);box-shadow:0 0 0 5px rgba(226,59,59,0.12),0 0 18px rgba(226,59,59,0.4);transform:scale(1.08)}
+.syd-cw{display:inline-block;margin-top:9px;font-family:'Special Elite',monospace;font-size:9.5px;letter-spacing:1px;text-transform:uppercase;color:var(--syd-red);border:1px solid var(--syd-line2);background:rgba(226,59,59,0.08);padding:3px 8px;border-radius:4px}
+.syd-arc-hint{text-align:center;font-family:'Special Elite',monospace;font-size:11px;letter-spacing:1.5px;color:var(--syd-faint);text-transform:uppercase;margin-bottom:18px}
+
+.syd-support{text-align:center;padding:26px 22px;border:1px solid var(--syd-line);border-radius:14px;background:var(--syd-panel);margin-bottom:24px}
+.syd-support p{font-size:14px;color:var(--syd-muted);max-width:520px;margin:0 auto 18px}
+.syd-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.syd-btn{display:inline-flex;align-items:center;gap:9px;padding:11px 22px;border-radius:10px;font-family:'Oswald',sans-serif;font-weight:500;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;border:1px solid transparent;transition:transform .15s,filter .15s}
+.syd-btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.syd-btn-kofi{background:#ff5e5b;color:#fff!important}
+.syd-btn-discord{background:#5865f2;color:#fff!important}
+.syd-btn .ic{font-size:17px}
+
+.syd-foot{text-align:center;font-family:'Special Elite',monospace;font-size:10px;letter-spacing:1.5px;color:var(--syd-faint);text-transform:uppercase;margin-top:8px}
+.syd-chibi{position:fixed;bottom:8px;right:6px;z-index:2;pointer-events:none;width:148px;height:auto;filter:drop-shadow(0 8px 18px rgba(0,0,0,0.6));animation:syd-float 6s ease-in-out infinite}
+@keyframes syd-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+@media(max-width:720px){
+  .syd-name{font-size:38px}
+  .syd-dossier{flex-direction:column;align-items:center}
+  .syd-notes{border-left:none;padding-left:0}
+  .syd-arc::before{left:19px}
+  .syd-node,.syd-node.right{width:100%;left:0;text-align:left;padding-left:48px;padding-right:6px}
+  .syd-node.left{text-align:left}
+  .syd-node.left .syd-dot,.syd-node.right .syd-dot{left:0;right:auto}
+  .syd-chibi{width:96px}
+}
